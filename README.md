@@ -15,3 +15,7 @@ Packages Installed
 - https://github.com/VonHeikemen/lsp-zero.nvim
 - https://github.com/Raimondi/delimitMate 
 - https://github.com/nvim-tree/nvim-tree.lua
+
+Also intalled
+- Jetbrains Mono font from nerd fonts
+- Iterm2 for colors
