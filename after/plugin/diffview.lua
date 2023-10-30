@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>d', vim.cmd.DiffviewOpen)
+vim.keymap.set('n', '<leader>sd', vim.cmd.DiffviewOpen)
 local actions = require("diffview.actions")
 
 require("diffview").setup({
