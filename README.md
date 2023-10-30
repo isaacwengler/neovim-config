@@ -17,6 +17,7 @@ Packages Installed
 - https://github.com/nvim-tree/nvim-tree.lua
 - https://github.com/lewis6991/gitsigns.nvim
 - https://github.com/sindrets/diffview.nvim
+- https://github.com/romgrk/barbar.nvim
 
 Also intalled
 - Jetbrains Mono font from nerd fonts
