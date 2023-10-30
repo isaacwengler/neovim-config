@@ -33,4 +33,5 @@ require("lazy").setup({
     'Raimondi/delimitMate',
     'nvim-tree/nvim-web-devicons',
     'nvim-tree/nvim-tree.lua',
+    'lewis6991/gitsigns.nvim'
 })
