@@ -1,12 +1,6 @@
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
-lsp.setup_servers({
-	'tsserver',
-	'eslint',
-	'lua_ls',
-	'jdtls'
-})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -30,6 +24,19 @@ lsp.set_preferences({
         hint = 'H',
         info = 'I'
     }
+})
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	ensure_installed = {
+		'tsserver',
+		'eslint',
+		'lua_ls',
+		'jdtls'
+	},
+	handlers = {
+		lsp.default_setup,
+	}
 })
 
 lsp.on_attach(function(client, bufnr)
