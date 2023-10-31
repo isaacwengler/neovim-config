@@ -64,6 +64,12 @@ For general vim docs, see this [cheat sheet](https://vim.rtorr.com)
 
 See `:help` when handling conflicts, there is a lot
 
+## git fugitive
+
+`<leader>gb` -> git browse, open in github
+
+`:Git <git command>` -> run like command line git
+
 ## file tree
 
 `<leader>t` -> Toggle file tree
