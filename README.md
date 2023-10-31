@@ -22,3 +22,5 @@ Packages Installed
 Also intalled
 - Jetbrains Mono font from nerd fonts
 - Iterm2 for colors
+
+Check out the [custom remaps](./custom-mappings.md)
