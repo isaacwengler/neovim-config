@@ -32,7 +32,8 @@ require('mason-lspconfig').setup({
 		'tsserver',
 		'eslint',
 		'lua_ls',
-		'jdtls'
+		'jdtls',
+        'pylsp'
 	},
 	handlers = {
 		lsp.default_setup,
