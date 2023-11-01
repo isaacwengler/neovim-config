@@ -26,6 +26,8 @@ For general vim docs, see this [cheat sheet](https://vim.rtorr.com)
 
 `<leader>ww` -> Change windows (`<C-w>w`)
 
+`<leader>wv` -> Split windows vertically (`<C-w>w`)
+
 ### Visual Mode
 
 `J` -> Move highlighted text down
