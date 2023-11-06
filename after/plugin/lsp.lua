@@ -32,8 +32,6 @@ require('mason-lspconfig').setup({
         'tsserver',
         'eslint',
         'lua_ls',
-        'jdtls',
-        'pylsp'
     },
     handlers = {
         lsp.default_setup,
@@ -68,3 +66,5 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+require'lspconfig'.pyright.setup{}
