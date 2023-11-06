@@ -40,5 +40,6 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
     },
     "tpope/vim-fugitive",
-    "tpope/vim-rhubarb"
+    "tpope/vim-rhubarb",
+    'mfussenegger/nvim-jdtls'
 })
