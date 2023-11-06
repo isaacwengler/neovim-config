@@ -26,33 +26,15 @@ For general vim docs, see this [cheat sheet](https://vim.rtorr.com)
 
 `<leader>ww` -> Change windows (`<C-w>w`)
 
-`<leader>wv` -> Split windows vertically (`<C-w>w`)
+`<leader>wv` -> Split windows vertically (`<C-w>v`)
+
+`<leader>b` -> Back to last buffer
 
 ### Visual Mode
 
 `J` -> Move highlighted text down
 
 `K` -> Move highlighted text up
-
-## File Tab (barbar) mappings
-
-`<A-,>` -> previous buffer
-
-`<A-.>` -> next buffer
-
-`<A-<>` -> Move buffer tab left
-
-`<A->>` -> Move buffer tab right
-
-`<A-1>` ... `<A-9>` -> go to buffer N
-
-`<A-0>` -> go to last buffer
-
-`<A-p>` -> pin buffer
-
-`<A-c>` -> close buffer
-
-`<C-b>` -> buffer pick mode
 
 ## git (diffview) mappings
 
@@ -102,17 +84,21 @@ See `:help` when handling conflicts, there is a lot
 
 `gd` -> go to definition
 
+`gr` -> go to references
+
+`gI` -> go to implementation
+
+`<leader>rn` -> rename
+
+`<leader>ca` -> code actions
+
+`<leader>D` -> type definition
+
+`<leader>ds` -> document symbols
+
+`<leader>ws` -> workspace symbols
+
 `K` -> hover
-
-`<leader>vws` -> query work space
-
-`<leader>vd` -> variable diagnostics (hover)
-
-`<leader>vca` -> variable code actions
-
-`<leader>vrr` -> variable references (find references)
-
-`<leader>vrn` -> variable rename
 
 ## Telescope
 
@@ -121,6 +107,18 @@ See `:help` when handling conflicts, there is a lot
 `<C-p>` -> find git files
 
 `<leader>ps` -> project search (grep search)
+
+`<leader>?` -> Search old files
+
+`<leader><space>` -> Search open buffers
+
+`<leader>sh` -> Search Help
+
+`<leader>sg` -> Search Grep (live grep)
+
+`<leader>se` -> Search Errors
+
+`<leader>sr` -> Search Resume
 
 ## Undotree
 
