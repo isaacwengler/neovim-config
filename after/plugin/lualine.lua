@@ -6,6 +6,7 @@ vim.g.gitblame_display_virtual_text = 0
 vim.g.gitblame_use_blame_commit_file_urls = true
 
 local default_message_template = '<author> (<date>)'
+local descriptive_message_template = '<author> (<date>) <summary>'
 vim.g.gitblame_message_template = default_message_template
 
 require('lualine').setup {
@@ -50,3 +51,15 @@ require('lualine').setup {
 }
 
 vim.keymap.set('n', '<leader>gb', vim.cmd.GitBlameOpenFileURL)
+
+local function toggleBlameMessage()
+    vim.cmd.GitBlameDisable()
+    if vim.g.gitblame_message_template == default_message_template then
+        vim.g.gitblame_message_template = descriptive_message_template
+    else
+        vim.g.gitblame_message_template = default_message_template
+    end
+    vim.cmd.GitBlameEnable()
+end
+
+vim.keymap.set('n', '<leader>gm', toggleBlameMessage)
