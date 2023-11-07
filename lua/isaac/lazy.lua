@@ -41,5 +41,5 @@ require("lazy").setup({
     },
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
-    'f-person/git-blame.nvim'
+    { dir = "~/lua/git-blame.nvim" }
 })
