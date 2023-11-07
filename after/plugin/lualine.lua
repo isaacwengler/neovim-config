@@ -1,3 +1,14 @@
+local git_blame = require('gitblame')
+git_blame.setup {
+    date_format = '%r',
+}
+vim.g.gitblame_display_virtual_text = 0
+-- change to true after fixing
+vim.g.gitblame_use_blame_commit_file_urls = false
+
+local default_message_template = '<author> (<date>)'
+vim.g.gitblame_message_template = default_message_template
+
 require('lualine').setup {
     options = {
         icons_enabled = true,
@@ -21,8 +32,8 @@ require('lualine').setup {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { { 'filename', path = 1 } },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
+        lualine_x = { { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available } },
+        lualine_y = { 'encoding', 'fileformat', 'filetype' },
         lualine_z = { 'location' }
     },
     inactive_sections = {
@@ -38,3 +49,5 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {}
 }
+
+vim.keymap.set('n', '<leader>gb', vim.cmd.GitBlameOpenFileURL)
