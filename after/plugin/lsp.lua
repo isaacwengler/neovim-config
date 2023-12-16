@@ -67,4 +67,5 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+require'lspconfig'.jsonls.setup{}
 require'lspconfig'.pyright.setup{}
