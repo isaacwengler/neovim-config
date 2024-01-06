@@ -38,7 +38,7 @@ require('mason-lspconfig').setup({
     }
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     local nmap = function(keys, func, desc)
         if desc then
             desc = 'LSP: ' .. desc
@@ -67,5 +67,17 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-require'lspconfig'.jsonls.setup{}
-require'lspconfig'.pyright.setup{}
+require('lspconfig').htmx.setup({})
+require('lspconfig').html.setup({})
+require('lspconfig').gopls.setup({})
+require('lspconfig').lua_ls.setup({
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
+require('lspconfig').jsonls.setup({})
+require('lspconfig').pyright.setup({})

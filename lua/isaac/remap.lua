@@ -8,21 +8,16 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
-
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-vim.keymap.set("n", "<leader>wt", vim.cmd.tabclose)
-vim.keymap.set("n", "<leader>wc", vim.cmd.close)
-vim.keymap.set("n", "<leader>ww", "<C-w>w")
-vim.keymap.set("n", "<leader>wv", "<C-w>v")
+vim.keymap.set("n", "<C-w>t", vim.cmd.tabclose)
 vim.keymap.set("n", "<leader>b", "<C-^>")

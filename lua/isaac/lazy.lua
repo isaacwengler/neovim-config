@@ -41,7 +41,7 @@ require("lazy").setup({
     },
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
-    { dir = "~/lua/git-blame.nvim" },
+    "f-person/git-blame.nvim",
     'mfussenegger/nvim-dap',
     'mfussenegger/nvim-dap-python'
 })
