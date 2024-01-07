@@ -25,25 +25,3 @@ git clone this-repo-url
 mv neovim-config nvim
 ```
 
-Set ~/.zshrc
-```
-alias vim="nvim"
-alias vi="nvim"
-# Enable vi mode
-bindkey -v
-```
-
-## Plugins Installed
-- https://github.com/folke/lazy.nvim
-- https://github.com/nvim-telescope/telescope.nvim
-- https://github.com/nvim-treesitter/nvim-treesitter
-- https://github.com/Mofiqul/vscode.nvim
-- https://github.com/mbbill/undotree
-- https://github.com/VonHeikemen/lsp-zero.nvim
-- https://github.com/Raimondi/delimitMate 
-- https://github.com/nvim-tree/nvim-tree.lua
-- https://github.com/lewis6991/gitsigns.nvim
-- https://github.com/sindrets/diffview.nvim
-- https://github.com/romgrk/barbar.nvim
-
-Check out the [custom remaps](./custom-mappings.md)
