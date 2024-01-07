@@ -32,3 +32,6 @@ vim.opt.spell = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.o.background = 'dark'
+
