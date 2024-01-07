@@ -51,7 +51,6 @@ return {
                     if desc then
                         desc = 'LSP: ' .. desc
                     end
-
                     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
                 end
 
@@ -84,24 +83,22 @@ return {
                     'pyright',
                 },
                 handlers = {
-                    require('lsp-zero').default_setup,
-                }
-            })
-
-            require('lspconfig').htmx.setup({})
-            require('lspconfig').html.setup({})
-            require('lspconfig').gopls.setup({})
-            require('lspconfig').lua_ls.setup({
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            globals = { 'vim' }
+                    function(server_name)
+                        require("lspconfig")[server_name].setup {}
+                    end,
+                    ["lua_ls"] = function()
+                        require("lspconfig").lua_ls.setup {
+                            settings = {
+                                Lua = {
+                                    diagnostics = {
+                                        globals = { "vim" }
+                                    }
+                                }
+                            }
                         }
-                    }
+                    end,
                 }
             })
-            require('lspconfig').jsonls.setup({})
-            require('lspconfig').pyright.setup({})
         end
     },
 }
