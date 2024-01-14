@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 
+    dependencies = {
         'nvim-tree/nvim-web-devicons',
         opt = true,
     },
@@ -16,7 +16,7 @@ return {
             },
             ignore_focus = {},
             always_divide_middle = true,
-            globalstatus = false,
+            globalstatus = true,
             refresh = {
                 statusline = 1000,
                 tabline = 1000,
@@ -44,7 +44,7 @@ return {
         inactive_winbar = {},
         extensions = {}
     },
-    config = function(_, opts) 
+    config = function(_, opts)
         require('gitblame')
         require('lualine').setup(opts)
     end

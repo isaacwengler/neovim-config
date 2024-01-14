@@ -65,7 +65,7 @@ return {
                 nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
                 nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-                nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+                nmap('<leader>K', vim.lsp.buf.signature_help, 'Signature Documentation')
             end)
 
             lsp.setup({})
