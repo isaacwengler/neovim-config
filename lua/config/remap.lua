@@ -29,3 +29,9 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-session<CR>")
 
 vim.keymap.set("n", "<C-w>t", vim.cmd.tabclose)
+
+-- quickfix lists
+vim.keymap.set("n", "<leader>q", vim.cmd.copen)
+vim.keymap.set("n", "<leader>Q", vim.cmd.cclose)
+vim.keymap.set("n", "]d", vim.cmd.cnext)
+vim.keymap.set("n", "[d", vim.cmd.cprev)
