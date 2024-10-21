@@ -1,14 +1,16 @@
 return {
-    'Mofiqul/vscode.nvim',
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = false,
+    priority = 1000,
     opts = {
-        transparent = true,
-        italic_comments = false,
-        color_overrides = {
-            vscLineNumber = '#FFFFFF',
+        variant = "main",
+        dark_variant = "main",
+
+        styles = {
+            bold = true,
+            italic = true,
+            transparency = true,
         },
-    },
-    config = function(_, opts) 
-        require('vscode').setup(opts)
-        require('vscode').load()
-    end
+    }
 }
