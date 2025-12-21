@@ -74,6 +74,7 @@ return {
 
                 nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
                 nmap('<leader>K', vim.lsp.buf.signature_help, 'Signature Documentation')
+                nmap('<C-K>', vim.diagnostic.open_float, 'Hover Diagnostic')
             end)
 
             lsp.setup({})
