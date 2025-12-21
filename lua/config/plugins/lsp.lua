@@ -3,7 +3,15 @@ return {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x'
     },
-    { 'williamboman/mason.nvim', config = true },
+    {
+        'williamboman/mason.nvim',
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
+        }
+    },
     {
         'hrsh7th/nvim-cmp',
         dependencies = {
