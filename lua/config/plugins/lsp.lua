@@ -85,10 +85,7 @@ return {
 
             require('mason-lspconfig').setup({
                 ensure_installed = {
-                    'eslint',
                     'lua_ls',
-                    'jsonls',
-                    'pyright',
                 },
                 handlers = {
                     function(server_name)
