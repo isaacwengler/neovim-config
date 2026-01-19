@@ -4,7 +4,7 @@ return {
     build = ':TSUpdate',
     config = function()
         require('nvim-treesitter').setup {}
-        require('nvim-treesitter').install { 'lua', 'typescript', 'javascript', 'json', 'c_sharp', 'sql' }
+        require('nvim-treesitter').install { 'lua', 'typescript', 'javascript', 'tsx', 'json', 'c_sharp', 'sql' }
 
         vim.api.nvim_create_autocmd('FileType', {
             pattern = '*',
