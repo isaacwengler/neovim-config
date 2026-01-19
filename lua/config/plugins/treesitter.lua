@@ -1,13 +1,16 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
     build = ':TSUpdate',
-    opts = {
-        auto_install = true,
-        highlight = {
-            enable = true,
-        },
-    },
-    config = function(_, opts)
-        require('nvim-treesitter.config').setup(opts)
+    config = function()
+        require('nvim-treesitter').setup {}
+        require('nvim-treesitter').install { 'lua', 'typescript', 'javascript', 'json', 'c_sharp', 'sql' }
+
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = '*',
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
+        })
     end
 }
